@@ -1,4 +1,9 @@
 .icon {
-  width: 100px;
-  max-height: 120px;
+  width: 50px;
+  max-height: 70px;
+
+  @media (min-width: 768px) {
+    width: 100px;
+    max-height: 120px;
+  }
 }
