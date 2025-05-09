@@ -9,7 +9,7 @@
     grid-template-columns: 300px 2fr;
     max-width: 800px;
     column-gap: 200px;
-    background-image: url('./timeline.svg');
+    background-image: url('./img/timeline.svg');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 200px auto;
