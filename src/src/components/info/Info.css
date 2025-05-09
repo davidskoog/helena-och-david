@@ -1,0 +1,31 @@
+.info {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  .container > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .container > div {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    > div ul {
+      width: 48%;
+    }
+  }
+}

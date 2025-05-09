@@ -1,0 +1,52 @@
+.timeline-item {
+  text-align: center;
+  position: relative;
+  width: 300px;
+  margin-top: 150px;
+
+  &:first-child {
+    margin-top: 0;
+    grid-column: 2;
+  }
+
+  .time {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+  }
+
+  p {
+    margin-top: 0;
+    font-size: 1.75rem;
+  }
+
+  img {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    transform: translateX(100%);
+  }
+}
+
+.timeline-item--reversed {
+  img {
+    right: auto;
+    left: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width: 850px) {
+  img {
+    top: 0;
+    transform: translateY(-100%);
+  }
+
+  .timeline-item:nth-child(odd):not(:first-child) {
+    margin-top: 196px;
+  }
+
+  .timeline-item:nth-child(even) {
+    margin-top: 34px;
+  }
+}

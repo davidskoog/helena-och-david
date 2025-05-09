@@ -1,0 +1,23 @@
+:root {
+  --font-base: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-heading: 'Bagel Fat One', system-ui;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
