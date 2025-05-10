@@ -3,9 +3,9 @@ import './Info.css';
 
 const Info = () => {
   return (
-    <div className="info">
+    <div className="info" id="praktisk-information">
       <div className="container">
-        <h2>Praktiskt information</h2>
+        <h2>Praktisk information</h2>
 
         <div className="two-columns">
           <ul>
