@@ -1,0 +1,17 @@
+.gallery {
+  padding: 4rem 1.5rem;
+  background-image: url('./img/loop-desktop.svg');
+  background-position: top center;
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-color: var(--color-pink);
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.gallery__inner {
+  max-width: 1280px;
+  margin: -10% auto;
+}

@@ -1,0 +1,31 @@
+.gallery-item {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: visible;
+  margin: 350px auto;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    margin: 700px auto;
+  }
+}
+
+.gallery-item--reverse {
+  @media (min-width: 768px) {
+    flex-direction: row-reverse;
+  }
+}
+
+.gallery-item__inner {
+  position: relative;
+  flex: 1 1 50%;
+  width: 100%;
+  padding-top: 56.25%;
+
+  @media (min-width: 768px) {
+    padding-top: 28.125%;
+  }
+}
