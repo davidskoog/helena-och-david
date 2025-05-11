@@ -50,7 +50,7 @@ const GalleryItem = ({
             left: 0,
             width: '100%',
             height: '100%',
-            backgroundColor: '#334395',
+            backgroundColor: '#272cbc',
             transform: bgStyles.y.to(
               y => `translateY(${y}px) rotate(${reverse ? '-5deg' : '5deg'})`
             ),
@@ -75,7 +75,6 @@ const GalleryItem = ({
           flex: '1 1 50%',
           padding: '4rem 1rem',
           zIndex: 1,
-          color: '#334395',
           fontFamily: 'Bagel Fat One',
           transform: textStyles.y.to(y => `translateY(${y}px)`),
         }}

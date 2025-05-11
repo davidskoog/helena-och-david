@@ -33,3 +33,10 @@ body {
     padding: 4rem 1.5rem;
   }
 }
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: var(--color-blue);
+}

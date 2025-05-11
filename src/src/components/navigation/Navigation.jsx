@@ -11,7 +11,7 @@ const Navigation = () => {
         <a href="#var-historia">Vår historia</a>
       </li>
       <li>
-        <a href="#praktisk-information">Praktisk information</a>
+        <a href="#praktisk-information">Information</a>
       </li>
     </ul>
   );
