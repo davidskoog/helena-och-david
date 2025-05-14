@@ -4,6 +4,7 @@ import './GalleryItem.css';
 
 const GalleryItem = ({
   src,
+  src2x,
   width = '100%',
   speed = 0.3,
   alt = '',
@@ -22,9 +23,12 @@ const GalleryItem = ({
       const rect = ref.current.getBoundingClientRect();
       const elementTop = rect.top;
 
-      const imageOffset = -elementTop * speed;
-      const bgOffset = -elementTop * (speed * 0.5);
-      const textOffset = -elementTop * (speed * 0.8);
+      // const imageOffset = -elementTop * speed;
+      // const bgOffset = -elementTop * (speed * 0.5);
+      // const textOffset = -elementTop * (speed * 0.8);
+      const imageOffset = elementTop * speed;
+      const bgOffset = elementTop * (speed * 0.5);
+      const textOffset = elementTop * (speed * 0.8);
 
       imageApi.start({ y: imageOffset });
       bgApi.start({ y: bgOffset });
@@ -46,18 +50,19 @@ const GalleryItem = ({
         <animated.div
           style={{
             position: 'absolute',
-            top: '-10%',
+            top: '10%',
             left: 0,
             width: '100%',
             height: '100%',
             backgroundColor: '#272cbc',
             transform: bgStyles.y.to(
-              y => `translateY(${y}px) rotate(${reverse ? '-5deg' : '5deg'})`
+              y => `translateY(${y}px) rotate(${reverse ? '10deg' : '-10deg'})`
             ),
           }}
         />
         <animated.img
           src={src}
+          srcSet={`${src2x} 2x`}
           alt={alt}
           style={{
             position: 'absolute',
@@ -66,7 +71,9 @@ const GalleryItem = ({
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            transform: imageStyles.y.to(y => `translateY(${y}px)`),
+            transform: imageStyles.y.to(
+              y => `translateY(${y}px) rotate(${reverse ? '3deg' : '-3deg'})`
+            ),
           }}
         />
       </div>
@@ -75,7 +82,6 @@ const GalleryItem = ({
           flex: '1 1 50%',
           padding: '4rem 1rem',
           zIndex: 1,
-          fontFamily: 'Bagel Fat One',
           transform: textStyles.y.to(y => `translateY(${y}px)`),
         }}
       >

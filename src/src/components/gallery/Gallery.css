@@ -1,6 +1,6 @@
 .gallery {
   padding: 4rem 1.5rem;
-  background-image: url('../img/loop-desktop.svg');
+  background-image: url('./img/loop-desktop.svg');
   background-position: top center;
   background-repeat: repeat-y;
   background-size: contain;
@@ -13,5 +13,28 @@
 
 .gallery__inner {
   max-width: 1280px;
-  margin: -10% auto;
+  margin: -100px auto;
+
+  @media (min-width: 768px) {
+    margin: -10% auto;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 2rem;
+
+    @media (min-width: 768px) {
+      font-size: 8rem;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 1.7rem;
+    }
+  }
 }
