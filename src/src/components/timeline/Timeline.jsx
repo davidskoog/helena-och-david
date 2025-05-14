@@ -22,7 +22,7 @@ const Program = () => {
       <TimelineItem time="17:30" text="Middag" icon="food" />
       <TimelineItem
         time="21:00"
-        text="Dans och karaoke"
+        text="Fest och dans"
         icon="music"
         reversed={true}
       />

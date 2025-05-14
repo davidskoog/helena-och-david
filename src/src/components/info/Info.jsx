@@ -19,9 +19,15 @@ const Info = () => {
             <li>
               <h3>Hitta hit</h3>
               <p>
-                Adress: Gamla Almedalsv. 3A
+                Adress:{' '}
+                <a href="https://www.google.se/maps/place/Gamla+Almedalsv%C3%A4gen,+412+63+G%C3%B6teborg/@57.6870945,11.9985216,198m/data=!3m1!1e3!4m6!3m5!1s0x464ff3a2c020f22f:0x1da9d9e98bee0776!8m2!3d57.687048!4d11.9988513!16s%2Fg%2F11c43tv1m9?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D">
+                  Gamla Almedalsv. 3A
+                </a>
                 <br />
-                Spårvagnshållsplats: Almedal
+                Spårvagnshållsplats:{' '}
+                <a href="https://www.google.com/maps/place/G%C3%B6teborg+Almedal/@57.6872004,11.9970057,19.71z/data=!4m6!3m5!1s0x464ff3a2f454901d:0xa8b81f94a62ed5d9!8m2!3d57.68717!4d11.99702!16s%2Fg%2F11dyk6w46?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D">
+                  Almedal
+                </a>
                 <br />
                 Parkering: Finns i närheten
               </p>
@@ -54,8 +60,8 @@ const Info = () => {
             <li>
               <h3>Hålla tal?</h3>
               <p>
-                Har du något du vill säga, sjunga eller överraska med under
-                kvällen? Kontakta våra fantastiska toastmasters senast den 6
+                Har du något du vill säga, sjunga eller överraska oss med under
+                kvällen? Kontakta då våra fantastiska toastmasters senast den 6
                 augusti, så hjälper de till att planera kvällen på bästa sätt!
               </p>
             </li>

@@ -10,9 +10,9 @@ const Hero = () => {
           Helena & David gifter sig lördagen den <span>6 september</span>
         </h1>
         <p>
-          Vi hoppas att ni kan vara med och fira tillsammans med oss. Vigseln
-          börjar kl 15.00 och därefter fortsätter bröllopsfesten med middag,
-          dans och karaoke!
+          Här hittar du allt du behöver veta – från tider och plats till vår
+          historia, festens innehåll och lite praktiskt smått och gott. Kom och
+          fira med oss!
         </p>
         <Navigation />
       </div>
