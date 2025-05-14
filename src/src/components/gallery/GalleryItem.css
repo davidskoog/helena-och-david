@@ -5,7 +5,7 @@
   justify-content: space-between;
   position: relative;
   overflow: visible;
-  margin: 150px auto;
+  margin: 50px auto;
 
   @media (min-width: 768px) {
     flex-direction: row;

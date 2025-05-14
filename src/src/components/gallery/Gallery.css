@@ -13,10 +13,10 @@
 
 .gallery__inner {
   max-width: 1280px;
-  margin: -100px auto;
+  margin: -50px auto 150px;
 
   @media (min-width: 768px) {
-    margin: -10% auto;
+    margin: -100px auto;
   }
 
   h2 {
