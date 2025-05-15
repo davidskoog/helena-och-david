@@ -112,15 +112,15 @@
 }
 
 .time-slider input[type='range']:focus::-webkit-slider-thumb {
-  border: 1px solid red;
-  outline: 3px solid #053a5f;
+  border: 1px solid var(--color-blue);
+  outline: 3px solid var(--color-blue);
   outline-offset: 0.125rem;
 }
 
 /******** Firefox styles ********/
 /* slider track */
 .time-slider input[type='range']::-moz-range-track {
-  background-color: red;
+  background-color: var(--color-blue);
   border-radius: 0.5rem;
   height: 0.5rem;
 }
@@ -131,14 +131,14 @@
   border-radius: 0; /*Removes default border-radius that FF applies*/
 
   /*custom styles*/
-  background-color: red;
+  background-color: var(--color-blue);
   height: 2rem;
   width: 1rem;
 }
 
 .time-slider input[type='range']:focus::-moz-range-thumb {
-  border: 1px solid red;
-  outline: 3px solid #053a5f;
+  border: 1px solid var(--color-blue);
+  outline: 3px solid var(--color-blue);
   outline-offset: 0.125rem;
 }
 

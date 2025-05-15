@@ -30,7 +30,7 @@ const Gallery = () => {
           reverse={true}
         >
           <h2>2012</h2>
-          <p>Sol och bad på Kreta</p>
+          <p>Vi drog till Kreta för sol och bad</p>
         </GalleryItem>
         <GalleryItem
           src="./img/2013-small.webp"
@@ -56,7 +56,7 @@ const Gallery = () => {
           speed={0.25}
         >
           <h2>2015</h2>
-          <p>Ponchadans på Madeira</p>
+          <p>På Madeira dansar alla efter fem glas poncha</p>
         </GalleryItem>
         <GalleryItem
           src="./img/2016-small.webp"
@@ -65,7 +65,7 @@ const Gallery = () => {
           reverse={true}
         >
           <h2>2016</h2>
-          <p>70-talsfest i Lidköping</p>
+          <p>Bowlarparet drog på 70-talsfest i Lidköping”</p>
         </GalleryItem>
         <GalleryItem
           src="./img/2017-small.webp"
@@ -82,7 +82,7 @@ const Gallery = () => {
           reverse={true}
         >
           <h2>2018</h2>
-          <p>Köpte ett rosa hus i Mölndal</p>
+          <p>Vi köpte ett rosa 80-talshus i Mölndal</p>
         </GalleryItem>
         <GalleryItem
           src="./img/2019-small.webp"
@@ -90,7 +90,7 @@ const Gallery = () => {
           speed={0.25}
         >
           <h2>2019</h2>
-          <p>Och så kom Otto</p>
+          <p>Tre veckor för tidigt - Otto är här</p>
         </GalleryItem>
         <GalleryItem
           src="./img/2020-small.webp"
@@ -107,7 +107,7 @@ const Gallery = () => {
           speed={0.25}
         >
           <h2>2021</h2>
-          <p>Knasfamiljen från Mölndal</p>
+          <p>Den lilla knasfamiljen från Mölndal</p>
         </GalleryItem>
         <GalleryItem
           src="./img/2022-small.webp"
@@ -116,7 +116,7 @@ const Gallery = () => {
           reverse={true}
         >
           <h2>2022</h2>
-          <p>Lillebror Alve presenterar sig</p>
+          <p>Lillebror Alve dök upp i raketfart</p>
         </GalleryItem>
         <GalleryItem
           src="./img/2023-small.webp"
@@ -124,7 +124,7 @@ const Gallery = () => {
           speed={0.25}
         >
           <h2>2023</h2>
-          <p>Sommarlov på Skoogsro</p>
+          <p>Underbar sommar i Skoogsro</p>
         </GalleryItem>
         <GalleryItem
           src="./img/2024-small.webp"
@@ -133,7 +133,7 @@ const Gallery = () => {
           reverse={true}
         >
           <h2>2024</h2>
-          <p>Världens bästa familj!</p>
+          <p>En kort stund av stillhet i Varberg</p>
         </GalleryItem>
 
         <GalleryItem
@@ -142,7 +142,7 @@ const Gallery = () => {
           speed={0.25}
         >
           <h2>2025</h2>
-          <p>Nu gifter vi oss!</p>
+          <p>Woo! Nu äntligen gifter vi oss</p>
         </GalleryItem>
       </div>
     </div>
