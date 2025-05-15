@@ -5,6 +5,7 @@ import Program from './src/components/program/Program';
 import Header from './src/components/header/Header.jsx';
 import Gallery from './src/components/gallery/Gallery.jsx';
 import Fab from './src/components/fab/Fab.jsx';
+import MediaPlayer from './src/components/media-player/MediaPlayer.jsx';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Gallery />
       <Info />
       <Fab />
+      <MediaPlayer />
     </>
   );
 }

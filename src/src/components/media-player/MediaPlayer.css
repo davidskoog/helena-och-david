@@ -1,0 +1,196 @@
+.media-player {
+  /* border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+}
+
+.track-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.track-list li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
+}
+
+.track-list li:hover {
+  background-color: #eee;
+}
+
+.track-list li.active {
+  background-color: var(--color-blue);
+  color: var(--color-pink);
+  font-weight: bold;
+}
+
+.player {
+  padding: 3rem;
+  border-radius: 8px;
+  outline: 3px solid var(--color-blue);
+  font-weight: bold;
+  outline-offset: -1px;
+}
+
+.controls {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.controls button {
+  outline: 3px solid var(--color-blue);
+  font-size: 2rem;
+  background: none;
+  color: var(--color-blue);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background: var(--color-blue);
+  color: var(--color-pink);
+}
+
+.time-slider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+/* .time-slider input[type='range'] {
+  flex-grow: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
+} */
+
+/********** Range Input Styles **********/
+/*Range Reset*/
+.time-slider input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Removes default focus */
+.time-slider input[type='range']:focus {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+/* slider track */
+.time-slider input[type='range']::-webkit-slider-runnable-track {
+  background-color: var(--color-blue);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+.time-slider input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -10px; /* Centers thumb on the track */
+
+  /*custom styles*/
+  background-color: var(--color-blue);
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 100%;
+}
+
+.time-slider input[type='range']:focus::-webkit-slider-thumb {
+  border: 1px solid red;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+}
+
+/******** Firefox styles ********/
+/* slider track */
+.time-slider input[type='range']::-moz-range-track {
+  background-color: red;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+.time-slider input[type='range']::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+
+  /*custom styles*/
+  background-color: red;
+  height: 2rem;
+  width: 1rem;
+}
+
+.time-slider input[type='range']:focus::-moz-range-thumb {
+  border: 1px solid red;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+}
+
+.time-slider span {
+  font-family: monospace;
+  min-width: 50px;
+}
+
+/* /* .media-player {
+  audio {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    outline: none;
+  }
+} */
+
+/* .media-player {
+  background-color: var(--color-blue);
+  color: var(--color-beige);
+}
+
+.media-player h2 {
+  color: var(--color-beige);
+}
+
+.controls button {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition:
+      background-color 0.2s ease-in-out,
+      color 0.2s ease-in-out;
+    outline: 3px solid white;
+    font-weight: bold;
+    outline-offset: -1px;
+}
+
+.time-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.time-display span {
+  font-family: monospace;
+  min-width: 45px;
+}
+
+.time-display input[type="range"] {
+  flex: 1; 
+} */

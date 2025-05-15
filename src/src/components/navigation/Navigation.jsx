@@ -13,6 +13,9 @@ const Navigation = () => {
       <li>
         <a href="#praktisk-information">Information</a>
       </li>
+      <li>
+        <a href="#media">Media</a>
+      </li>
     </ul>
   );
 };
