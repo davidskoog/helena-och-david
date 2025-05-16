@@ -1,6 +1,12 @@
 .media-player {
-  /* border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .container > p {
+    margin: 0 0 3rem;
+    font-size: 1.5em;
+  }
 }
 
 .track-list {
@@ -10,39 +16,91 @@
 }
 
 .track-list li {
-  padding: 10px;
+  padding: 8px 8px 8px 48px;
   cursor: pointer;
   border-radius: 6px;
   margin-bottom: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s color 0.3s;
+  border: 3px solid var(--color-blue);
+  position: relative;
+
+  &:before {
+    content: ' ';
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    border: 3px solid var(--color-blue);
+    transform: translateY(-50%);
+  }
+
+  &:after {
+    display: none;
+    content: ' ';
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 21px;
+    background-color: var(--color-blue);
+    transform: translateY(-50%);
+  }
 }
 
 .track-list li:hover {
-  background-color: #eee;
+  background-color: var(--color-beige);
+
+  &:after {
+    display: block;
+  }
 }
 
 .track-list li.active {
   background-color: var(--color-blue);
   color: var(--color-pink);
   font-weight: bold;
+
+  &:before {
+    width: 10px;
+    height: 10px;
+    background: var(--color-pink);
+    border: 3px solid var(--color-pink);
+    left: 16px;
+  }
+
+  &:after {
+    display: block;
+  }
 }
 
 .player {
-  padding: 3rem;
+  padding: 1rem;
   border-radius: 8px;
   outline: 3px solid var(--color-blue);
   font-weight: bold;
   outline-offset: -1px;
+
+  @media (min-width: 765px) {
+    padding: 3rem;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
 }
 
 .controls {
-  margin: 15px 0;
+  margin: 32px 0 24px;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
 .controls button {
+  display: flex;
   outline: 3px solid var(--color-blue);
   font-size: 2rem;
   background: none;
@@ -52,11 +110,21 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s;
+
+  svg {
+    width: 40px;
+    height: 40px;
+    transition: fill 0.3s;
+  }
 }
 
 .controls button:hover {
   background: var(--color-blue);
   color: var(--color-pink);
+
+  svg {
+    fill: var(--color-pink);
+  }
 }
 
 .time-slider {
@@ -111,12 +179,6 @@
   border-radius: 100%;
 }
 
-.time-slider input[type='range']:focus::-webkit-slider-thumb {
-  border: 1px solid var(--color-blue);
-  outline: 3px solid var(--color-blue);
-  outline-offset: 0.125rem;
-}
-
 /******** Firefox styles ********/
 /* slider track */
 .time-slider input[type='range']::-moz-range-track {
@@ -145,6 +207,10 @@
 .time-slider span {
   font-family: monospace;
   min-width: 50px;
+
+  &:last-child {
+    text-align: right;
+  }
 }
 
 /* /* .media-player {

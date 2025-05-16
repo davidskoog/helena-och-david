@@ -6,7 +6,6 @@ const Header = () => {
   return (
     <header>
       <Navigation />
-      <audio ref={audioRef} src="./media/dansband.mp3" />
     </header>
   );
 };

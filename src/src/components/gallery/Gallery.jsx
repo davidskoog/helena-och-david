@@ -65,7 +65,7 @@ const Gallery = () => {
           reverse={true}
         >
           <h2>2016</h2>
-          <p>Bowlarparet drog på 70-talsfest i Lidköping”</p>
+          <p>Bowlarparet drog på 70-talsfest i Lidköping</p>
         </GalleryItem>
         <GalleryItem
           src="./img/2017-small.webp"
@@ -107,7 +107,7 @@ const Gallery = () => {
           speed={0.25}
         >
           <h2>2021</h2>
-          <p>Den lilla knasfamiljen från Mölndal</p>
+          <p>Raggarträff i Onsala</p>
         </GalleryItem>
         <GalleryItem
           src="./img/2022-small.webp"
@@ -133,7 +133,7 @@ const Gallery = () => {
           reverse={true}
         >
           <h2>2024</h2>
-          <p>En kort stund av stillhet i Varberg</p>
+          <p>90-talet, kom tillbaka!</p>
         </GalleryItem>
 
         <GalleryItem

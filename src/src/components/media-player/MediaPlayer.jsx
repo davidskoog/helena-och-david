@@ -1,13 +1,14 @@
 import { useRef, useState, useEffect } from 'react';
 import './MediaPlayer.css';
+import Icon from '../icon/Icon';
 
 const tracks = [
   {
-    title: 'Ett hjärta, två namn – Dansbands-versionen',
+    title: '1. Ett hjärta, två namn (Dansbands-versionen)',
     src: './media/dansband.mp3',
   },
   {
-    title: 'Ett hjärta, två namn – Indie-versionen',
+    title: '2. Ett hjärta, två namn (Indie-versionen)',
     src: './media/dansband2.mp3',
   },
 ];
@@ -98,6 +99,7 @@ const MediaPlayer = () => {
         </p>
 
         <div className="player">
+          <h3>Playlist</h3>
           <ul className="track-list">
             {tracks.map((track, index) => (
               <li
@@ -115,9 +117,51 @@ const MediaPlayer = () => {
             Din webbläsare stödjer inte ljuduppspelning.
           </audio>
           <div className="controls">
-            <button onClick={handlePrev}>⏮</button>
-            <button onClick={togglePlay}>{isPlaying ? '⏸' : '▶'}</button>
-            <button onClick={handleNext}>⏭</button>
+            <button onClick={handlePrev}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="#272cbc"
+                viewBox="0 -960 960 960"
+              >
+                <path d="M220-240v-480h80v480h-80Zm520 0L380-480l360-240v480Zm-80-240Zm0 90v-180l-136 90 136 90Z" />
+              </svg>
+            </button>
+            <button onClick={togglePlay}>
+              {isPlaying ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="#272cbc"
+                  viewBox="0 -960 960 960"
+                >
+                  <path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z" />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="#272cbc"
+                  viewBox="0 -960 960 960"
+                >
+                  <path d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                </svg>
+              )}
+            </button>
+            <button onClick={handleNext}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="#272cbc"
+                viewBox="0 -960 960 960"
+              >
+                <path d="M660-240v-480h80v480h-80Zm-440 0v-480l360 240-360 240Zm80-240Zm0 90 136-90-136-90v180Z" />
+              </svg>
+            </button>
           </div>
 
           <div className="time-slider">

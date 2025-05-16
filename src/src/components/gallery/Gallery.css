@@ -1,6 +1,6 @@
 .gallery {
   padding: 4rem 1.5rem;
-  background-image: url('./img/loop-desktop.svg');
+  background-image: url('/img/loop-desktop.svg');
   background-position: top center;
   background-repeat: repeat-y;
   background-size: contain;
