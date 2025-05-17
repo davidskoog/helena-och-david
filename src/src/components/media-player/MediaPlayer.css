@@ -127,6 +127,10 @@
   }
 }
 
+.controls button:active {
+  background-color: transparent;
+}
+
 .time-slider {
   display: flex;
   align-items: center;

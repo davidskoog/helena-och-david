@@ -14,7 +14,7 @@ const Navigation = () => {
         <a href="#praktisk-information">Information</a>
       </li>
       <li>
-        <a href="#media">Media</a>
+        <a href="#musik">Musik</a>
       </li>
     </ul>
   );

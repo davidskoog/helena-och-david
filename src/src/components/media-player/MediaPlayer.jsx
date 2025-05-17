@@ -89,9 +89,9 @@ const MediaPlayer = () => {
   };
 
   return (
-    <div id="media" className="media-player">
+    <div id="musik" className="media-player">
       <div className="container">
-        <h2>Media</h2>
+        <h2>Musik</h2>
         <p>
           När vi inte kunde bestämma oss för vilket efternamn vi skulle ta,
           gjorde vi det enda logiska: vi skrev en låt om det. Varsågoda – ett
