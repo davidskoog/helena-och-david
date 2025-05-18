@@ -6,6 +6,7 @@ import Header from './src/components/header/Header.jsx';
 import Gallery from './src/components/gallery/Gallery.jsx';
 import Fab from './src/components/fab/Fab.jsx';
 import MediaPlayer from './src/components/media-player/MediaPlayer.jsx';
+import Footer from './src/components/footer/Footer.jsx';
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
       <Program />
       <Gallery />
       <Info />
-      <Fab />
       <MediaPlayer />
+      <Footer />
+      <Fab />
     </>
   );
 }

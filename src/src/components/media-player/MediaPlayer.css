@@ -112,9 +112,14 @@
   transition: background 0.3s;
 
   svg {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     transition: fill 0.3s;
+
+    @media (min-width: 400px) {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 
@@ -134,7 +139,6 @@
 .time-slider {
   display: flex;
   align-items: center;
-  gap: 10px;
   margin-top: 2rem;
 }
 
