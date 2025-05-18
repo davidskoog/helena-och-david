@@ -179,6 +179,7 @@ const MediaPlayer = () => {
           <div className="time-slider">
             <span>{formatTime(currentTime)}</span>
             <input
+              aria-label="Tidslinje"
               type="range"
               min="0"
               max={duration || 0}
