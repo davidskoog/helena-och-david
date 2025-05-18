@@ -4,12 +4,24 @@ import Icon from '../icon/Icon';
 
 const tracks = [
   {
-    title: '1. Ett hjärta, två namn (Dansbands-versionen)',
-    src: './media/dansband.mp3',
+    title: '1. Ett hjärta, två namn (Indie-versionen)',
+    src: './media/helena-och_david-ett_hjarta_tva_namn_indie.mp3',
   },
   {
-    title: '2. Ett hjärta, två namn (Indie-versionen)',
-    src: './media/dansband2.mp3',
+    title: '2. Ett hjärta, två namn (Dansbands-versionen)',
+    src: './media/helena-och_david-ett_hjarta_tva_namn_dansband.mp3',
+  },
+  {
+    title: '3. Ett hjärta, två namn (Skatepunk-versionen)',
+    src: './media/helena-och_david-ett_hjarta_tva_namn_skatepunk.mp3',
+  },
+  {
+    title: '4. Ett hjärta, två namn (80-tals-versionen)',
+    src: './media/helena-och_david-ett_hjarta_tva_namn_80.mp3',
+  },
+  {
+    title: '5. Ett hjärta, två namn (Boyband-versionen)',
+    src: './media/helena-och_david-ett_hjarta_tva_namn_boyband.mp3',
   },
 ];
 
@@ -19,6 +31,7 @@ const MediaPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [showLyrics, setShowLyrics] = useState(false);
 
   const currentTrack = tracks[currentTrackIndex];
 
@@ -97,7 +110,6 @@ const MediaPlayer = () => {
           gjorde vi det enda logiska: vi skrev en låt om det. Varsågoda – ett
           musikaliskt kärleksbrev till vår lilla identitetskris.
         </p>
-
         <div className="player">
           <h3>Playlist</h3>
           <ul className="track-list">
@@ -176,6 +188,130 @@ const MediaPlayer = () => {
             <span>{formatTime(duration)}</span>
           </div>
         </div>
+        {!showLyrics && (
+          <a href="#text" onClick={() => setShowLyrics(true)}>
+            Klicka här för att lära er texten
+          </a>
+        )}
+        {showLyrics && (
+          <div id="text" className="lyrics">
+            <p>
+              <strong>[Vers 1]</strong>
+              <br />
+              Helena och David
+              <br />
+              Ett kärleksfullt spår
+              <br />
+              En saga som börjar där drömmarna var
+              <br />
+              Men ett dilemma tickar likt en klocka nu
+              <br />
+              Vilket namn ska vi ta
+              <br />
+              Vi vet inte hur
+            </p>
+
+            <p>
+              <strong>[Refräng]</strong>
+              <br />
+              Är vi Skoog eller Bergander
+              <br />
+              Vi står mitt emellan
+              <br />
+              Två världar i strid
+              <br />
+              Men ändå så snälla
+              <br />
+              Helena vill en sak
+              <br />
+              David nåt annat
+              <br />
+              Men hjärtat slår för oss
+              <br />
+              Och det är det som stannar
+            </p>
+
+            <p>
+              <strong>[Vers 2]</strong>
+              <br />
+              Vi har valt blommor
+              <br />
+              Klänning och mat
+              <br />
+              Vi har ringarna redo och bordsplacerat klart
+              <br />
+              Men evighetens stämpel
+              <br />
+              Vad ska den bli
+              <br />
+              Namnet vi bär
+              <br />
+              Vi är två men ändå vi
+            </p>
+
+            <p>
+              <strong>[Refräng]</strong>
+              <br />
+              Är vi Skoog eller Bergander
+              <br />
+              Vi står mitt emellan
+              <br />
+              Två världar i strid
+              <br />
+              Men ändå så snälla
+              <br />
+              Helena vill en sak
+              <br />
+              David nåt annat
+              <br />
+              Men hjärtat slår för oss
+              <br />
+              Och det är det som stannar
+            </p>
+
+            <p>
+              <strong>[Brygga]</strong>
+              <br />
+              Kanske ett nytt namn
+              <br />
+              Ett steg mot nåt nytt
+              <br />
+              Vi mixar
+              <br />
+              Vi blandar
+              <br />
+              Det känns så försnytt
+              <br />
+              Bergskoog eller Skoogander
+              <br />
+              Vad tycker du
+              <br />
+              För kärlekens val
+              <br />
+              Det är alltid vi nu
+            </p>
+
+            <p>
+              <strong>[Refräng]</strong>
+              <br />
+              Är vi Skoog eller Bergander
+              <br />
+              Vi står mitt emellan
+              <br />
+              Två världar i strid
+              <br />
+              Men ändå så snälla
+              <br />
+              Helena vill en sak
+              <br />
+              David nåt annat
+              <br />
+              Men hjärtat slår för oss
+              <br />
+              Och det är det som stannar
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

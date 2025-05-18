@@ -77,6 +77,7 @@
 }
 
 .player {
+  margin-bottom: 2rem;
   padding: 1rem;
   border-radius: 8px;
   outline: 3px solid var(--color-blue);
@@ -219,6 +220,10 @@
   &:last-child {
     text-align: right;
   }
+}
+
+.lyrics {
+  padding-top: 2rem;
 }
 
 /* /* .media-player {
