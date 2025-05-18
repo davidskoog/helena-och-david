@@ -61,6 +61,7 @@ const GalleryItem = ({
           }}
         />
         <animated.img
+          loading="lazy"
           src={src}
           srcSet={`${src2x} 2x`}
           alt={alt}
