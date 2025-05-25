@@ -68,8 +68,25 @@ const MediaPlayer = () => {
       audio.pause();
     } else {
       audio.play();
+
+      if (window.gtag) {
+        window.gtag('event', 'play_track', {
+          event_category: 'Audio',
+          event_label: currentTrack.title,
+        });
+      }
     }
     setIsPlaying(!isPlaying);
+  };
+
+  const handleShowText = e => {
+    setShowLyrics(true);
+    if (window.gtag) {
+      window.gtag('event', 'lyrics_click', {
+        event_category: 'Navigation',
+        event_label: 'Visa sångtext',
+      });
+    }
   };
 
   const handleTrackSelect = index => {
@@ -190,7 +207,7 @@ const MediaPlayer = () => {
           </div>
         </div>
         {!showLyrics && (
-          <a href="#text" onClick={() => setShowLyrics(true)}>
+          <a href="#text" onClick={e => handleShowText(e)}>
             Klicka här för att lära er texten
           </a>
         )}
@@ -319,114 +336,3 @@ const MediaPlayer = () => {
 };
 
 export default MediaPlayer;
-
-// import { useRef, useState, useEffect } from 'react';
-// import './MediaPlayer.css';
-
-// const MediaPlayer = () => {
-//   const audioRef = useRef(null);
-//   const [isPlaying, setIsPlaying] = useState(false);
-//   const [currentTime, setCurrentTime] = useState(0);
-//   const [duration, setDuration] = useState(0);
-
-//   useEffect(() => {
-//     const audio = audioRef.current;
-
-//     const handleTimeUpdate = () => {
-//       setCurrentTime(audio.currentTime);
-//     };
-
-//     const handleLoadedMetadata = () => {
-//       setDuration(audio.duration);
-//     };
-
-//     audio.addEventListener('timeupdate', handleTimeUpdate);
-//     audio.addEventListener('loadedmetadata', handleLoadedMetadata);
-
-//     return () => {
-//       audio.removeEventListener('timeupdate', handleTimeUpdate);
-//       audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
-//     };
-//   }, []);
-
-//   const togglePlay = () => {
-//     const audio = audioRef.current;
-//     if (!audio) return;
-
-//     if (isPlaying) {
-//       audio.pause();
-//     } else {
-//       audio.play();
-//     }
-
-//     setIsPlaying(!isPlaying);
-//   };
-
-//   const handleSliderChange = e => {
-//     const newTime = parseFloat(e.target.value);
-//     audioRef.current.currentTime = newTime;
-//     setCurrentTime(newTime);
-//   };
-
-//   const formatTime = time => {
-//     const minutes = Math.floor(time / 60);
-//     const seconds = Math.floor(time % 60)
-//       .toString()
-//       .padStart(2, '0');
-//     return `${minutes}:${seconds}`;
-//   };
-
-//   return (
-//     <div className="media-player">
-//       <div className="container">
-//         <h2>Musik</h2>
-//         <p>
-//           Här hittar du allt du behöver veta – från tider och plats till vår
-//           historia, festens innehåll och lite praktiskt smått och gott. Kom och
-//           fira med oss!
-//         </p>
-//         <ul>
-//           <li>
-
-//           </li>
-//         </ul>
-//         <audio ref={audioRef} src="./media/dansband.mp3" />
-//         <div className="controls">
-//           <button onClick={togglePlay}>
-//             {isPlaying ? '⏸ Pausa' : '▶️ Spela'}
-//           </button>
-
-//           <div className="time-display">
-//             <span>{formatTime(currentTime)}</span>
-//             <input
-//               type="range"
-//               min="0"
-//               max={duration}
-//               value={currentTime}
-//               onChange={handleSliderChange}
-//             />
-//             <span>{formatTime(duration)}</span>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default MediaPlayer;
-
-// // import './MediaPlayer.css';
-
-// // const MediaPlayer = () => {
-// //   return (
-// //     <div className="media-player">
-// //       <h2>Musik</h2>
-// //       <audio controls>
-// //         <source src="./media/dansband.mp3" type="audio/mpeg" />
-// //         Your browser does not support the audio tag.
-// //       </audio>
-// //     </div>
-// //   );
-// // };
-
-// // export default MediaPlayer;

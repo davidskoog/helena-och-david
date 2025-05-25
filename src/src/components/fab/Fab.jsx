@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import './Fab.css';
 
+const trackFabClick = () => {
+  if (window.gtag) {
+    window.gtag('event', 'scroll_to_top', {
+      event_category: 'Navigation',
+      event_label: 'Till toppen',
+    });
+  }
+};
+
 const Fab = () => {
   const [visible, setVisible] = useState(false);
 
@@ -22,7 +31,7 @@ const Fab = () => {
 
   return (
     visible && (
-      <a href="#top" className="fab">
+      <a href="#top" className="fab" onClick={trackFabClick}>
         Till toppen
       </a>
     )
