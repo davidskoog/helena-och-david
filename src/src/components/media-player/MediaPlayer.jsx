@@ -92,6 +92,13 @@ const MediaPlayer = () => {
   const handleTrackSelect = index => {
     setCurrentTrackIndex(index);
     setIsPlaying(true);
+
+    if (window.gtag) {
+      window.gtag('event', 'play_track', {
+        event_category: 'Audio',
+        event_label: tracks[index].title,
+      });
+    }
   };
 
   const handlePrev = () => {
