@@ -37,7 +37,12 @@ const MediaPlayer = () => {
 
   const trackPlay = title => {
     if (window.gtag) {
-      window.gtag('event', 'play_track', {
+      const eventName =
+        process.env.NODE_ENV === 'production'
+          ? 'play_track_prod'
+          : 'play_track';
+
+      window.gtag('event', eventName, {
         event_category: 'Audio',
         event_label: title,
       });
