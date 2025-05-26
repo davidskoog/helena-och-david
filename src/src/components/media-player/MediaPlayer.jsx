@@ -35,6 +35,15 @@ const MediaPlayer = () => {
 
   const currentTrack = tracks[currentTrackIndex];
 
+  const trackPlay = title => {
+    if (window.gtag) {
+      window.gtag('event', 'play_track', {
+        event_category: 'Audio',
+        event_label: title,
+      });
+    }
+  };
+
   useEffect(() => {
     const audio = audioRef.current;
 
@@ -68,13 +77,7 @@ const MediaPlayer = () => {
       audio.pause();
     } else {
       audio.play();
-
-      if (window.gtag) {
-        window.gtag('event', 'play_track', {
-          event_category: 'Audio',
-          event_label: currentTrack.title,
-        });
-      }
+      trackPlay(currentTrack.title);
     }
     setIsPlaying(!isPlaying);
   };
@@ -90,25 +93,38 @@ const MediaPlayer = () => {
   };
 
   const handleTrackSelect = index => {
+    const audio = audioRef.current;
+
+    if (index === currentTrackIndex) {
+      // Användaren klickar på samma låt igen → starta uppspelning om det inte redan spelas
+      if (!isPlaying) {
+        audio.play();
+        setIsPlaying(true);
+        trackPlay(tracks[index].title);
+      }
+      return;
+    }
+
+    // Byt till ny låt
     setCurrentTrackIndex(index);
     setIsPlaying(true);
-
-    if (window.gtag) {
-      window.gtag('event', 'play_track', {
-        event_category: 'Audio',
-        event_label: tracks[index].title,
-      });
-    }
+    trackPlay(tracks[index].title);
   };
 
   const handlePrev = () => {
-    setCurrentTrackIndex(prev => (prev === 0 ? tracks.length - 1 : prev - 1));
+    const newIndex =
+      currentTrackIndex === 0 ? tracks.length - 1 : currentTrackIndex - 1;
+    setCurrentTrackIndex(newIndex);
     setIsPlaying(true);
+    trackPlay(tracks[newIndex].title);
   };
 
   const handleNext = () => {
-    setCurrentTrackIndex(prev => (prev === tracks.length - 1 ? 0 : prev + 1));
+    const newIndex =
+      currentTrackIndex === tracks.length - 1 ? 0 : currentTrackIndex + 1;
+    setCurrentTrackIndex(newIndex);
     setIsPlaying(true);
+    trackPlay(tracks[newIndex].title);
   };
 
   const handleSliderChange = e => {
