@@ -154,6 +154,9 @@ const MediaPlayer = () => {
           När vi inte kunde bestämma oss för vilket efternamn vi skulle ta,
           gjorde vi det enda logiska: vi skrev en låt om det. Varsågoda – ett
           musikaliskt kärleksbrev till vår lilla identitetskris.
+          <br />
+          <br />
+          Den version som spelats mest är <strong>dansbandsversionen</strong>.
         </p>
         <div className="player">
           <h3>Playlist</h3>
