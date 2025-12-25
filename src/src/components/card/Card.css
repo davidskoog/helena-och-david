@@ -1,0 +1,47 @@
+.card {
+  border: 3px solid var(--color-blue, #3880ff);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(56, 128, 255, 0.08);
+  margin: 16px 0;
+}
+
+.card--inverted {
+  background-color: var(--color-blue, #3880ff);
+  color: var(--color-pink, #ff4081);
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 32px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 3em;
+}
+
+.card p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.card a {
+  margin-top: auto;
+}
+
+.card__icon {
+  display: flex;
+  align-items: center;
+}
+
+.card--inverted .card__icon img {
+  max-width: 50px;
+  transform: rotate(20deg);
+
+  @media (min-width: 768px) {
+    max-width: 80px;
+  }
+}
