@@ -14,13 +14,11 @@ const Navigation = () => {
   return (
     <ul className="navigation">
       <li>
-        <a href="#bilder" onClick={() => trackClick('Bilder')}>
-          Bilder
-        </a>
-      </li>
-      <li>
-        <a href="#brollopsfolder" onClick={() => trackClick('Bröllopsfolder')}>
-          Bröllopsfolder
+        <a
+          href="#allt-fran-brollopsdagen"
+          onClick={() => trackClick('Allt från bröllopsdagen')}
+        >
+          Allt från bröllopsdagen
         </a>
       </li>
       <li>

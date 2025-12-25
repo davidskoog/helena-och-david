@@ -6,7 +6,7 @@ import Card from '../card/Card';
 
 const InfoFromWedding = () => {
   return (
-    <div className="info-from-wedding" id="bilder">
+    <div className="info-from-wedding" id="allt-fran-brollopsdagen">
       <div className="container container--wide">
         <h2>Allt från bröllopsdagen</h2>
         <div className="grid">
