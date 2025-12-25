@@ -10,4 +10,23 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
 # helena-och-david
+
+## Deploy to GitHub Pages
+
+To deploy the site to GitHub Pages:
+
+1. **Build the project:**
+
+   ```bash
+   npm run build
+   ```
+
+   This creates an optimized production build in the `dist` folder.
+
+2. **Deploy to GitHub Pages:**
+   ```bash
+   npm run deploy
+   ```
+   This publishes the contents of the `dist` folder to the `gh-pages` branch, which GitHub Pages then uses to build and serve the site.
