@@ -1,4 +1,6 @@
 .media-player {
+  background-color: var(--color-beige);
+
   h2 {
     margin-bottom: 1rem;
   }

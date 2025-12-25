@@ -13,4 +13,8 @@
       line-height: 1.275em;
     }
   }
+
+  img {
+    width: 100%;
+  }
 }

@@ -137,7 +137,7 @@ const Gallery = () => {
         </GalleryItem>
 
         <GalleryItem
-          src="./img/2025-small.webp"
+          src="./img/2025-big.webp"
           src2x="./img/2025-big.webp"
           speed={0.25}
         >

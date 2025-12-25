@@ -6,14 +6,13 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="container">
-        <h1>
-          Helena & David gifter sig lördagen den <span>6 september</span>
-        </h1>
+        <h1>Äntligen, nu är vi gifta! </h1>
+        <img src="/img/wedding-couple.webp" alt="Brudparet" />
         <p>
-          Här hittar du allt du behöver veta – från tider och plats till vår
-          historia, festens innehåll och lite praktiskt smått och gott. Kom och
-          fira med oss!
+          Ett stort tack för att ni var med och gjorde vår bröllopsdag till den
+          bästa dagen ever!
         </p>
+        <p>// Fru Bergander och Herr Skoog</p>
         <Navigation />
       </div>
     </section>
