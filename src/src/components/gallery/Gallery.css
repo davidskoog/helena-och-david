@@ -4,6 +4,7 @@
   background-position: top center;
   background-repeat: repeat-y;
   background-size: contain;
+  overflow: hidden;
 
   h2 {
     text-align: center;
